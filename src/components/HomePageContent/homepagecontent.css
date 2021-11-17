@@ -1,0 +1,76 @@
+.container{
+  position: absolute;
+  width: 1190px;
+  height: 292px;
+  left: 222px;
+  top: 142px;
+}
+.first-img{
+  position: absolute;
+  width: 296px;
+  height: 197.45px;
+  left: 1098px;
+  top: 189px;
+}
+.button{
+  position: absolute;
+  width: 155px;
+  height: 44px;
+  left: 237px;
+  top: 376px;
+}
+.author-name{
+  position: absolute;
+  width: 116px;
+  height: 21px;
+  left: 254px;
+  top: 156px;
+}
+.date{
+  position: absolute;
+  width: 91px;
+  height: 19px;
+  left: 395px;
+  top: 158px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.content-tag{
+  position: absolute;
+  width: 97px;
+  height: 21px;
+  left: 509px;
+  top: 156px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #222222;
+}
+
+.first-content-heading{
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 49px;
+  letter-spacing: 0.01em;
+  color: #222222;
+  position: absolute;
+  left: 12.34%;
+  right: 51.09%;
+  top: 11.99%;
+  bottom: 84.41%;
+}
+.content-body{
+  position: absolute;
+  width: 809px;
+  height: 109px;
+  left: 237px;
+  top: 256px;
+  font-size: 18px;
+  line-height: 35px;
+  letter-spacing: 0.01em;
+}
+.button{
+  background: #FFFFFF;
+  border: 1px solid #222222;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
