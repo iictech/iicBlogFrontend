@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -22,4 +22,21 @@ function App() {
   );
 }
 
-export default App;
+export default App;*/
+
+import React from "react";
+import "./App.css";
+//import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Head from "./Components/Head";
+import "./Components/style.css";
+
+
+function Card() {
+	return (
+    <>
+		<Head/>
+    </>
+	);
+}
+
+export default Card;
