@@ -1,0 +1,105 @@
+.HomePage_Main{
+    position: relative;
+    font-size: 1rem;
+    display: flex;
+    width: 60em;
+    height: auto;
+    /*border: 2px solid black;*/
+    padding: 0.7em;
+    padding-left: 1.4em;
+    margin: auto;
+}
+
+.HomePage_CardHolder{
+    position: relative;
+    width: 75%;
+    /*border: 2px solid black;*/
+}
+
+.HomePage_TagHolder{
+    font-size: 1rem;
+    padding-left: 1em;
+    width: calc(60em - 80%);
+    position: relative;
+    /*border: 2px solid black;*/
+    margin-bottom: 1em;
+}
+
+.HomePage_TagHead{
+    position: relative;
+    color: rgba(0, 0, 0, 0.4);
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8em;
+    margin-bottom: 0.57em;
+}
+
+.HomePage_RecomendedTags{
+    width: 100%;
+    position: relative;
+    display: flex;
+    /*border: 2px solid black;*/
+    flex-wrap: wrap;
+}
+
+.HomePage_Tags{
+    font-size: 0.8em;
+    display: flex;
+    font-family: "Poppins";
+    font-weight: 800;
+    align-items: center;
+    position: relative;
+    height: 2em;
+    border-radius: 1em;
+    padding-inline: 1em;
+    margin-bottom: 0.3em;
+    margin-right: 0.5em;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.HomePage_Tags:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+@media only screen and (max-width:1057px){
+    .HomePage_Main{
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 45em;
+    }
+    .HomePage_TagHolder,.HomePage_CardHolder{
+        width: 96%;
+        padding-left: 0;
+    }
+}
+
+@media only screen and (max-width:772px){
+    .HomePage_Main{
+        width: min(35em,100%);
+    }
+    .HomePage_TagHolder{
+        font-size: 0.75em;
+    }
+    .HomePage_CardHolder{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width:489px){
+    .HomePage_Main{
+        padding: 0.3em;
+        padding-left: 0.6em;
+    }
+    .HomePage_TagHolder{
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (max-width:383px){
+    .HomePage_TagHolder{
+        font-size: 0.45em;
+    }
+}
