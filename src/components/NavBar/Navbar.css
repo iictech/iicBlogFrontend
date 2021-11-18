@@ -1,0 +1,116 @@
+.navbar{
+    position: relative;
+    top: 0;
+    font-size: 1.25rem;
+    width: 100%;
+    height: 3.7em;
+    margin: auto;
+    margin-bottom: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 10px 0 10px 5px rgba(0,0,0,0.08);
+    /*border: 2px solid black;*/
+}
+
+.IICBlogIconNav{
+    position: relative;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 2px solid black;*/
+}
+
+.IICBlogIconNav img{
+    position: relative;
+    height: 100%;
+    transform: scale(1.1);
+}
+
+.NavIconHolder{
+    position: relative;
+    font-size: 1.25em;
+    width: 25em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /*border: 2px solid black;*/
+}
+
+.NavIconHolder input{
+    position: relative;
+    height: 2.2em;
+    width: 20em;
+    border-radius: 1em;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Roboto Mono', monospace;
+    padding-inline: 0.8em;
+    /*border: 2px solid black;*/
+}
+
+.SearchNav{
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.NavIconHolder input:focus{
+    outline: none;
+}
+
+.SearchNav img{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.ProfileLink,.SearchNav{
+    transform: scale(0.85);
+    /*border: 2px solid black;*/
+    margin-inline: 0.7em;
+}
+
+.SearchNav{
+    margin-left: 1.4em;
+}
+
+@media only screen and (max-width:772px){
+    .navbar{
+        font-size: 0.85rem;
+    }
+    .ProfileLink,.SearchNav{
+        transform: scale(0.7);
+    }
+    .NavIconHolder input{
+        height: 1.9em;
+        width: 15em;
+        font-size: 0.75em;
+    }
+}
+
+@media only screen and (max-width:582px){
+    .NavIconHolder{
+        font-size: 0.7rem;
+    }
+    .ProfileLink,.SearchNav{
+        transform: scale(0.6);
+    }
+}
+
+@media only screen and (max-width:489px){
+    .navbar{
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width:383px){
+    .navbar{
+        font-size: 0.55rem;
+        padding-left: 2em;
+    }
+    .ProfileLink,.SearchNav{
+        transform: scale(0.45);
+    }
+}

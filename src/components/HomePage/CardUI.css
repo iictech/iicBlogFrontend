@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@300;600&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Poppins:wght@300;600&family=Roboto+Mono&family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.Home_cardMain{
+    font-size: 0.85rem;
+    position: relative;
+    width: min(52em,100%);
+    height: 13em;
+    /*border: 2px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.Home_cardInfo{
+    position: relative;
+    width: 70%;
+    height: 100%;
+}
+
+.Home_cardImageBox{
+    position: relative;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Home_articleInfo{
+    position: relative;
+    width: max(50%,fit-content);
+    display: flex;
+    align-items: center;
+}
+
+.Home_cardImage{
+    position: relative;
+    width: 90%;
+}
+
+.Home_CardAuthor{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    margin-right: 2em;
+}
+
+.Home_AuthorSvg{
+    position: relative;
+    width: 0.8em;
+    margin-right: 0.5em;
+}
+
+.Home_CardTag,.Home_CardDate{
+    position: relative;
+    letter-spacing: 1px;
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 800;
+    font-size: 0.8em;
+}
+
+.Home_CardDate{
+    margin-right: 2em;
+}
+
+.Home_AuthorName{
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8em;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.Home_articleHeading{
+    font-size: 1.9em;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(34, 34, 34, 1);
+    font-weight: 900;
+    margin-bottom: 0.3em;
+    padding-block: 0.15em;
+}
+
+.Home_articleBody{
+    font-size: 0.9em;
+    font-family: "Poppins";
+    padding-right: 0.5em;
+    margin-bottom: 0.8em;
+    letter-spacing: 0.3px;
+    font-weight: 800;
+    color:rgba(0, 0, 0, 0.6);
+}
+
+.Home_articleFooter{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 3em;
+}
+
+.Home_CardContinueReading{
+    position: relative;
+    bottom: 0.7em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8em;
+    font-weight: 700;
+    position: relative;
+    color: black;
+    border-radius: 1.5em;
+    width: 12em;
+    padding-inline: 0.4em;
+    height: 3em;
+    transition: all 0.3s ease;
+}
+
+.CardContinueReading{
+    transition: background-color,color 0.5s ease;
+}
+
+.Home_CardContinueReading:hover{
+    background-color: black;
+    color: white;
+}
+
+@media only screen and (max-width:772px){
+    .Home_cardMain{
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width:582px){
+    .Home_cardMain{
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (max-width:489px){
+    .Home_cardMain{
+        font-size: 0.5em;
+    }
+}
+
+@media only screen and (max-width:383px){
+    .Home_cardMain{
+        font-size: 0.4em;
+    }
+}
