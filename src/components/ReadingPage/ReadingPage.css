@@ -1,0 +1,140 @@
+.article_page_container {
+  max-width: 500px;
+  margin: auto;
+  /* border: 2px solid rgb(51, 49, 49); */
+  padding: 10px;
+  padding-top: 15px;
+}
+.article_page_tag {
+  padding-left: 20px;
+  font-weight: bold;
+}
+.article_page_title {
+  margin-top: 10px;
+  font-size: 35px;
+  padding-left: 20px;
+}
+.article_page_user {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+.article_page_titlename {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+}
+.article_page_titleusername,
+.article_page_titledate {
+  padding-left: 10px;
+  font-size: 10px;
+  width: 50%;
+}
+.article_page_titledate {
+  padding-top: 5px;
+}
+.article_page_titlename,
+.article_page_titleicons {
+  height: 20px;
+  width: 50%;
+  /* border: 2px solid green; */
+}
+.article_page_titleicons {
+  text-align: right;
+  padding-right: 5px;
+}
+.article_page_image {
+  margin: 10px auto;
+  width: 90%;
+  height: 200px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.card-pic img {
+  margin: auto;
+  display: flex;
+  width: 70em;
+  height: 40em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.small-para {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16em;
+  padding-top: 3em;
+  padding-block-end: 2em;
+}
+
+@media (max-width: 1500px) {
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .small-para {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+  }
+  .card-pic img {
+    width: 40em;
+    height: 25em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin: auto;
+  }
+}
+@media (max-width: 800px) {
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .small-para {
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+  }
+  .card-pic img {
+    width: 20em;
+    height: 15em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin: auto;
+  }
+}
