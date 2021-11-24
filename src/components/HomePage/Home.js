@@ -6,7 +6,6 @@ import "./Home.css";
 const limit = 10;
 const headers = {
     'Access-Control-Allow-Origin': '*',
-    'Content-Type': 'application/json',
     mode: 'no-cors',
 };
 
