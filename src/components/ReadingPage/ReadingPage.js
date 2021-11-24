@@ -1,10 +1,11 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import articleData from "./articleContent";
 import VRimage from "./VRimage.svg";
-import Footer from "./components/Footer/Footer";
-import Navbar from "./components/NavBar/Navbar";
 import "./ReadingPage.css";
 const ArticleTitle = () => {
+    const { username, id } = useParams();
+    console.log(username,id);
   return (
     <>
       <div className="article_page_container">
@@ -12,7 +13,6 @@ const ArticleTitle = () => {
           const { articleTag, title, userName, date, content } = ele;
           return (
             <>
-            <Navbar/>
               <span className="article_page_tag">{articleTag}</span>
               <h1 className="article_page_title">{title}</h1>
               <div className="article_page_user">
@@ -125,7 +125,6 @@ const ArticleTitle = () => {
                   </div>
                 </div>
               </body>
-              <Footer />
             </>
           );
         })}
