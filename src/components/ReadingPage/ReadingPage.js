@@ -1,11 +1,7 @@
 import React from "react";
-import Data from "./articleContent";
 import AuthorSVG from "../HomePage/Photos/author.svg";
 import { Link } from "react-router-dom";
 import "./ReadingPage.css";
-/*
-FOR BACKEND INTEGRATION
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -13,12 +9,9 @@ const headers = {
     'Access-Control-Allow-Origin': '*',
     mode: 'no-cors',
 };
-*/
+
 
 const Reading = () => {
-
-    /*
-    FOR BACKEND INTEGRATION
 
     const { username, id } = useParams();
     const [Data, setData] = useState({});
@@ -38,9 +31,14 @@ const Reading = () => {
         });
     };
     useEffect(MyCallback, []);
-    */
+    
 
-    return <MainArticle {...Data} />;
+    return (
+        <>
+        { isError ? "Error" : null }
+        { isError ? null : isLoading ? "Loading" : <MainArticle {...Data} />}
+        </>
+    );
 };
 
 const MainArticle = (props) => {
