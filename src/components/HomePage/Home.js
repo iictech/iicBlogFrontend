@@ -4,7 +4,11 @@ import CardUI from "./CardUI";
 import axios from "axios";
 import "./Home.css";
 const limit = 10;
-
+const headers = {
+    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json',
+    mode: 'no-cors',
+};
 
 const Home = () => {
     const [Data, setData] = useState([]);
@@ -15,6 +19,7 @@ const Home = () => {
     const MyCallback = () => {
         axios({
             method: "GET",
+            headers: headers,
             url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${offset}`
         }).then(req => {
             setData(req.data);
@@ -31,6 +36,7 @@ const Home = () => {
         setisLoading(true);
         axios({
             method: "GET",
+            headers: headers,
             url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${offset+limit}`
         }).then(req => {
             setData([...req.data]);
@@ -47,6 +53,7 @@ const Home = () => {
         setisLoading(true);
         axios({
             method: "GET",
+            headers: headers,
             url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${offset-limit}`
         }).then(req => {
             setData([...req.data]);
