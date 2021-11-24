@@ -24,7 +24,7 @@ const Card = (props) => {
                     <div className="Home_CardDate">{props.postedDate.toUpperCase()}</div>
                     <div className="Home_CardTag">{props.tags.toUpperCase()}</div>
                 </div>
-                <div className="Home_articleHeading">{compress(props.title,isTablet ? 29 : 36)}</div>
+                <div className="Home_articleHeading">{compress(props.title,isTablet ? 29 : 34)}</div>
                 <Media queries={{SmallWindow: "(max-width:776px)"}}>
                     {matches => !matches.SmallWindow ? (
                         <div className="Home_articleBody">{compress(props.body,200)}</div>
