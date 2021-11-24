@@ -3,7 +3,7 @@ import Tags from "./SampleData/Tags";
 import CardUI from "./CardUI";
 import axios from "axios";
 import "./Home.css";
-const limit = 10;
+const limit = 5;
 const headers = {
     'Access-Control-Allow-Origin': '*',
     mode: 'no-cors',
