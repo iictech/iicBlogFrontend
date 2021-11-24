@@ -54,7 +54,7 @@ const MainArticle = (props) => {
                 <div className="Reading_articleHeading">{props.title}</div>
                 <div className="Reading_articleInfo">
                     <div className="Reading_articleAuthor">
-                        <div className="Reading_authorSVG"><img src={AuthorSVG} alt="author"></img></div>
+                        <div className="Reading_authorSVG"><img src={AuthorSVG} alt=""></img></div>
                         <div className="Reading_articleUsername">{props.username}</div>
                     </div>
                     <div className="Reading_articleDate">{props.postedDate.toUpperCase()}</div>
@@ -66,7 +66,7 @@ const MainArticle = (props) => {
                     */}
                 </div>
             </div>
-            <div className="Reading_articleImage"><img src={props.imageUrl} alt="image"></img></div>
+            <div className="Reading_articleImage"><img src={props.imageUrl} alt=""></img></div>
             <div className="Reading_articleBody">
                 {props.body.map((e,index) => {
                     return (
