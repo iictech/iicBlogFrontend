@@ -12,7 +12,7 @@ function App() {
             <Navbar/>
             <Routes>
                 <Route exact path="/" element={<HomePage/>} />
-                <Route exact path="/" element={<ReadingPage/>} />
+                <Route path="/@:username/:id" element={<ReadingPage/>} />
             </Routes>
             <Footer/>
         </Router>

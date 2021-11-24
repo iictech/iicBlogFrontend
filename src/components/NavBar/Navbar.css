@@ -15,7 +15,7 @@
 
 .IICBlogIconNav{
     position: relative;
-    height: 4em;
+    height: 3.7em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,6 +30,7 @@
 
 .NavIconHolder{
     position: relative;
+    top: 0.15em;
     font-size: 1.25em;
     width: 25em;
     height: 100%;
@@ -79,6 +80,7 @@
 @media only screen and (max-width:772px){
     .navbar{
         font-size: 0.85rem;
+        box-shadow: 6px 0 5px 6px rgba(0,0,0,0.08);
     }
     .ProfileLink,.SearchNav{
         transform: scale(0.7);

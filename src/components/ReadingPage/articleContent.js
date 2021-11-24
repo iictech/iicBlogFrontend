@@ -7,7 +7,7 @@ const articleData = [
     articleId: 12343,
     date: "19.11.2021",
     content:
-    ["Visual reality is the new craze for our generation. Whoever ever watched a VR movie or played a VR game knows that."
+    ["Visual reality is the new craze for our generation. Whoever ever watched a VR movie or played a VR game knows that.",
            "With every passing day, coders are discovering new ways to explore it and newer sectors to apply VR. Take a peek to know how you can expect this awesome technology to change your reality you have always seen!",
            "• Medical-",
            "Remember the “boggart” concept? A creature that can turn into the object of your worst nightmare and you have to face it to know how to fight with the “dementors”. While JK Rowling actually took the idea of dementers from her depression, her thoughts can be implemented using VR. You can face your worst fears and find a way to deal with it. It will be really grateful to fight with phobia, anxiety, PTSD, autism and other mental illness. It can be used to sooth a stressed mind too. This VR can also work like a virtual 3-D printing. Newbies can be trained digitally to have a clear idea of what actually happens at the OT whereas professionals can use it to visualize a complex operational procedure. VR is surely going to bring a revolution in the medical field.",
