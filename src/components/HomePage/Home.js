@@ -19,7 +19,10 @@ const Home = () => {
         }).then(req => {
             setData(req.data);
             setisLoading(false);
-        }).catch(err => setisError(true));
+        }).catch(err =>{
+            setisError(true);
+            console.log(err);
+        });
     }
 
     useEffect(MyCallback , []);
@@ -33,7 +36,10 @@ const Home = () => {
             setData([...req.data]);
             setoffset(offset + limit);
             setisLoading(false);
-        }).catch(err => setisError(true));
+        }).catch(err => {
+                setisError(true);
+                console.log(err);
+            });
     };
 
     const PrevUpdate = () => {
@@ -46,7 +52,10 @@ const Home = () => {
             setData([...req.data]);
             setoffset(offset - limit);
             setisLoading(false);
-        }).catch(err => setisError(true));
+        }).catch(err => {
+                setisError(true);
+                console.log(err);
+            });
     };
 
     return (
