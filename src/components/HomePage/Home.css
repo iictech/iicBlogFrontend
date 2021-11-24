@@ -51,11 +51,22 @@
     height: 2em;
     border-radius: 1em;
     padding-inline: 1em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
     margin-right: 0.5em;
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background-color 0.2s ease;
+}
+
+.pageControl{
+    position: relative;
+    width: 10em;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    /*bordeR: 2px solid black;*/
 }
 
 .HomePage_Tags:hover{
