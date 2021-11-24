@@ -1,5 +1,4 @@
-import React,{ useEffect, useState, useRef } from "react";
-import Data from "./SampleData/Data";
+import React,{ useEffect, useState } from "react";
 import Tags from "./SampleData/Tags";
 import CardUI from "./CardUI";
 import axios from "axios";
@@ -13,7 +12,7 @@ const Home = () => {
     const [isLoading, setisLoading] = useState(true);
     const [isError, setisError] = useState(false);
 
-    useEffect(() => {
+    const MyCallback = () => {
         axios({
             method: "GET",
             url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${offset}`
@@ -21,8 +20,10 @@ const Home = () => {
             setData(req.data);
             setisLoading(false);
         }).catch(err => setisError(true));
-    },[]);
-    
+    }
+
+    useEffect(MyCallback , []);
+
     const NextUpdate = () => {
         setisLoading(true);
         axios({
@@ -50,6 +51,7 @@ const Home = () => {
 
     return (
         <>
+            { isError ? "Error" : null}
             { isLoading ? "Loading" : <PageMain Data={Data}/> }
             { isLoading ? null : 
                 <div className="pageControl">
