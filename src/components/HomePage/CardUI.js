@@ -45,9 +45,4 @@ const Card = (props) => {
     )
 };
 
-/*
-<div className="Home_articleHeading">{compress(props.title,35)}</div>
-<div className="Home_articleBody">{compress(props.Body,200)}</div>
-*/
-
 export default Card;

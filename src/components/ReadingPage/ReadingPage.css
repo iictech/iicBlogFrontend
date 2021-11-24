@@ -1,140 +1,147 @@
-.article_page_container {
-  max-width: 500px;
-  margin: auto;
-  /* border: 2px solid rgb(51, 49, 49); */
-  padding: 10px;
-  padding-top: 15px;
-}
-.article_page_tag {
-  padding-left: 20px;
-  font-weight: bold;
-}
-.article_page_title {
-  margin-top: 10px;
-  font-size: 35px;
-  padding-left: 20px;
-}
-.article_page_user {
-  padding-left: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: space-between;
-}
-.article_page_titlename {
-  padding-left: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: space-between;
-}
-.article_page_titleusername,
-.article_page_titledate {
-  padding-left: 10px;
-  font-size: 10px;
-  width: 50%;
-}
-.article_page_titledate {
-  padding-top: 5px;
-}
-.article_page_titlename,
-.article_page_titleicons {
-  height: 20px;
-  width: 50%;
-  /* border: 2px solid green; */
-}
-.article_page_titleicons {
-  text-align: right;
-  padding-right: 5px;
-}
-.article_page_image {
-  margin: 10px auto;
-  width: 90%;
-  height: 200px;
-}
-* {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  font-family: "Poppins", sans-serif;
-}
-html {
-  scroll-behavior: smooth;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300&display=swap');
+
+.Reading_articleMain{
+    position: relative;
+    font-size: 1rem;
+    width: 100%;
+    height: fit-content;
+    /*border: 2px solid black;*/
 }
 
-.card-pic img {
-  margin: auto;
-  display: flex;
-  width: 70em;
-  height: 40em;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-.small-para {
-  font-size: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16em;
-  padding-top: 3em;
-  padding-block-end: 2em;
-}
-
-@media (max-width: 1500px) {
-  * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
-
-  .small-para {
-    font-size: 0.8em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 3em;
-  }
-  .card-pic img {
-    width: 40em;
-    height: 25em;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
+.Reading_articleHead{
+    position: relative;
+    width: min(100%,40em);
     margin: auto;
-  }
+    /*border: 2px solid black;*/
 }
-@media (max-width: 800px) {
-  * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
-  }
-  html {
-    scroll-behavior: smooth;
-  }
 
-  .small-para {
+.Reading_articleTags{
+    position: relative;
+    width: 100%;
+    /*border: 2px solid black;*/
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 2em;
+    letter-spacing: 1px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 800;
     font-size: 0.8em;
+}
+
+.Reading_articleTags > *{
+    margin-right: 2em;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+}
+
+.Reading_articleTags > *:hover{
+    color: rgba(0, 0, 0, 1);
+}
+
+.Reading_articleHeading{
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    font-size: 2.7em;
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    color: black;
+    margin-block: 0.1em;
+}
+
+.Reading_articleInfo{
+    position: relative;
+    width: 100%;
+    height: 2em;
+    display: flex;
+    /*border: 2px solid black;*/
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.Reading_articleInfo > *{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Reading_articleAuthor{
+    width: fit-content;
+    /*border: 2px solid black;*/
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.86em;
+    font-weight: 900;
+    color: rgba(10, 30, 100, 1);
+    cursor: pointer;
+    margin-right: 2em;
+}
+
+.Reading_authorSVG{
+    position: relative;
+    height: 100%;
+    width: 2em;
+    /*border: 2px solid black;*/
     display: flex;
     justify-content: center;
+    justify-self: flex-start;
     align-items: center;
-    padding: 2em;
-  }
-  .card-pic img {
-    width: 20em;
-    height: 15em;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    display: flex;
+}
+
+.Reading_authorSVG img{
+    position: relative;
+    /*border: 2px solid black;*/
+}
+
+.Reading_articleDate{
+    position: relative;
+    letter-spacing: 1px;
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 800;
+    font-size: 0.8em;
+}
+
+.Reading_articleImage{
+    position: relative;
+    width: min(100%,70em);
     margin: auto;
-  }
+    /*border: 2px solid black;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 2em;
+}
+
+.Reading_articleImage img{
+    position: relative;
+    width: 90%;
+}
+
+.Reading_articleBody{
+    position: relative;
+    width: min(100%,40em);
+    margin: auto;
+    font-family: 'Aleo', serif;
+    letter-spacing: 0.5px;
+    font-weight: 800;
+    font-size: 1em;
+    line-height: 2.2em;
+    color: black;
+    /*border: 2px solid black;*/
+}
+
+@media only screen and (max-width:772px){
+    .Reading_articleMain{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 582px){
+    .Reading_articleHead,.Reading_articleBody{
+        padding-inline: 1em;
+    }
 }
