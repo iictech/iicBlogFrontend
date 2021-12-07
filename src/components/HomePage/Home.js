@@ -32,7 +32,7 @@ const Home = () => {
         axios({
             method: "GET",
             headers: headers,
-            url: `http://iic-extn.herokuapp.com/home/tags`
+            url: `https://iic-extn.herokuapp.com/home/tags`
         }).then(req => {
             let arr = ["","","","",""];
             console.log(req.data);
