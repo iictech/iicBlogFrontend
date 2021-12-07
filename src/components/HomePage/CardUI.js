@@ -19,7 +19,7 @@ const Card = (props) => {
                 <div className="Home_articleInfo">
                     <div className="Home_CardAuthor">
                         <img className="Home_AuthorSvg" src={profileUser} alt="user"/>
-                        <div className="Home_AuthorName">{props.author}</div>
+                        <div className="Home_AuthorName">{props.username}</div>
                     </div>
                     <div className="Home_CardDate">{props.postedDate.toUpperCase()}</div>
                     <div className="Home_CardTag">{props.tags.toUpperCase()}</div>

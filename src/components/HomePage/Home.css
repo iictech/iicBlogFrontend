@@ -41,6 +41,10 @@
     flex-wrap: wrap;
 }
 
+.HomePage_RecomendedTags *{
+    text-decoration: none;
+}
+
 .HomePage_Tags{
     font-size: 0.8em;
     display: flex;
@@ -56,6 +60,8 @@
     background-color: rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background-color 0.2s ease;
+    text-decoration: none;
+    color: #252525;
 }
 
 .pageControl{
@@ -71,6 +77,16 @@
 
 .HomePage_Tags:hover{
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Home-arrows{
+    position: relative;
+    border: none;
+    color: #868686;
+    background-color: transparent;
+    font-weight: 1000;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:1057px){

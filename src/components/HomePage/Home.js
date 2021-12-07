@@ -1,9 +1,9 @@
 import React,{ useEffect, useState } from "react";
-import Tags from "./SampleData/Tags";
+import { BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs";
 import CardUI from "./CardUI";
 import axios from "axios";
 import "./Home.css";
-const limit = 5;
+const limit = 10;
 const headers = {
     'Access-Control-Allow-Origin': '*',
     mode: 'no-cors',
@@ -11,17 +11,33 @@ const headers = {
 
 const Home = () => {
     const [Data, setData] = useState([]);
-    const [offset, setoffset] = useState(0);
+    const [Tags, setTags] = useState([]);
     const [isLoading, setisLoading] = useState(true);
     const [isError, setisError] = useState(false);
 
     const MyCallback = () => {
+        if(localStorage.getItem("offset")===null)localStorage.setItem("offset",0);
         axios({
             method: "GET",
             headers: headers,
-            url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${offset}`
+            url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${parseInt(localStorage.getItem("offset"))*limit}`
         }).then(req => {
             setData(req.data);
+            setisLoading(false);
+        }).catch(err =>{
+            setisError(true);
+            console.log(err);
+        });
+
+        axios({
+            method: "GET",
+            headers: headers,
+            url: `http://iic-extn.herokuapp.com/home/tags`
+        }).then(req => {
+            let arr = ["","","","",""];
+            console.log(req.data);
+            req.data.forEach((tags_json,idx) => {arr[idx] = tags_json.tag;});
+            setTags(arr);
             setisLoading(false);
         }).catch(err =>{
             setisError(true);
@@ -36,43 +52,52 @@ const Home = () => {
         axios({
             method: "GET",
             headers: headers,
-            url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${offset+limit}`
+            url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${(parseInt(localStorage.getItem("offset"))+1)*limit}`
         }).then(req => {
             setData([...req.data]);
-            setoffset(offset + limit);
+            localStorage.setItem("offset",parseInt(localStorage.getItem("offset"))+1);
             setisLoading(false);
         }).catch(err => {
-                setisError(true);
-                console.log(err);
-            });
+            setisError(true);
+            console.log(err);
+        });
     };
 
     const PrevUpdate = () => {
-        if(offset===0)return;
+        if(localStorage.getItem("offset")===0)return;
         setisLoading(true);
         axios({
             method: "GET",
             headers: headers,
-            url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${offset-limit}`
+            url: `https://iic-blog-backend.herokuapp.com/home/articles?limit=${limit}&offset=${(parseInt(localStorage.getItem("offset"))-1)*limit}`
         }).then(req => {
             setData([...req.data]);
-            setoffset(offset - limit);
+            localStorage.setItem("offset",parseInt(localStorage.getItem("offset"))-1);
             setisLoading(false);
         }).catch(err => {
-                setisError(true);
-                console.log(err);
-            });
+            setisError(true);
+            console.log(err);
+        });
     };
+
+    useEffect(() => {
+        window.addEventListener("beforeunload", function(e) {
+            if(e || window.event){
+                localStorage.removeItem("offset");
+                e.preventDefault();
+            }
+        });
+    });
 
     return (
         <>
             { isError ? "Error" : null}
-            { isLoading ? "Loading" : <PageMain Data={Data}/> }
+            { isLoading ? "Loading" : <PageMain Data={Data} Tags={Tags}/> }
             { isLoading ? null : 
                 <div className="pageControl">
-                    <button onClick={PrevUpdate}>prev</button>
-                    <h4>{(offset/limit)+1}</h4>
-                    <button onClick={NextUpdate}>next</button>
+                    <button onClick={PrevUpdate} className="Home-arrows"><BsFillArrowLeftCircleFill /></button>
+                    <h4>{parseInt(localStorage.getItem("offset"))+1}</h4>
+                    <button onClick={NextUpdate} className="Home-arrows"><BsFillArrowRightCircleFill /></button>
                 </div>
             }
         </>
@@ -80,6 +105,8 @@ const Home = () => {
 };
 
 const PageMain = (props) => {
+    const base_url = window.location.origin;
+    console.log(base_url);
     return (
         <div className="HomePage_Main">
             <div className="HomePage_CardHolder">
@@ -90,8 +117,12 @@ const PageMain = (props) => {
             <div className="HomePage_TagHolder">
                 <div className="HomePage_TagHead">TAGS</div>
                 <div className="HomePage_RecomendedTags">
-                    {Tags.map((e,index) => {
-                        return <div key={index} className="HomePage_Tags">{e}</div>
+                    {props.Tags.map((e,index) => {
+                        return (
+                            <a href={`${base_url}/tags/${e}`}>
+                                <div key={index} className="HomePage_Tags">{e}</div>
+                            </a>
+                        );
                     })}
                 </div>
             </div>

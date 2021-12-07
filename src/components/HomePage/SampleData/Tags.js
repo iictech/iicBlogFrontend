@@ -1,2 +1,2 @@
-const Tags = ["Technology","Abstract","Entrepreneur","Programming","Startup"];
+const Tags = ["Technology","Sayan","Shubhayu","Programming","Startup"];
 export default Tags;

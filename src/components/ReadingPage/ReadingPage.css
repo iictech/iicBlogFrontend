@@ -107,7 +107,7 @@
 
 .Reading_articleImage{
     position: relative;
-    width: min(100%,70em);
+    width: min(100%,40em);
     margin: auto;
     /*border: 2px solid black;*/
     display: flex;
@@ -118,7 +118,7 @@
 
 .Reading_articleImage img{
     position: relative;
-    width: 90%;
+    width: 100%;
 }
 
 .Reading_articleBody{
@@ -143,5 +143,8 @@
 @media only screen and (max-width: 582px){
     .Reading_articleHead,.Reading_articleBody{
         padding-inline: 1em;
+    }
+    .Reading_articleImage{
+        width: calc(100% - 2em);
     }
 }
