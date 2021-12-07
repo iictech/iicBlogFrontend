@@ -1,6 +1,5 @@
 import React from "react";
 import AuthorSVG from "../HomePage/Photos/author.svg";
-import { Link } from "react-router-dom";
 import "./ReadingPage.css";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
@@ -42,18 +41,23 @@ const Reading = () => {
 };
 
 const MainArticle = (props) => {
+    const base_url = window.location.origin;
     return (
         <div className="Reading_articleMain">
             <div className="Reading_articleHead">
                 <div className="Reading_articleTags">
                 {props.tags.map((e,index) => {
-                        return <Link to={`/`}><div className="Reading_articleTAG">{e.toUpperCase()}</div></Link>
+                        return (
+                            <a href={`${base_url}/tags/${e}`}>
+                                <div className="Reading_articleTAG">{e.toUpperCase()}</div>
+                            </a>
+                        );
                 })}</div>
                 <div className="Reading_articleHeading">{props.title}</div>
                 <div className="Reading_articleInfo">
                     <div className="Reading_articleAuthor">
                         <div className="Reading_authorSVG"><img src={AuthorSVG} alt=""></img></div>
-                        <div className="Reading_articleUsername">{props.username}</div>
+                        <div className="Reading_articleUsername">{props.author}</div>
                     </div>
                     <div className="Reading_articleDate">{props.postedDate.toUpperCase()}</div>
                     {/*
