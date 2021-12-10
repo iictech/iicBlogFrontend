@@ -11,7 +11,7 @@
 
 .Reading_articleHead{
     position: relative;
-    width: min(100%,40em);
+    width: min(100%,50em);
     margin: auto;
     /*border: 2px solid black;*/
 }
@@ -107,7 +107,7 @@
 
 .Reading_articleImage{
     position: relative;
-    width: min(100%,40em);
+    width: min(100%,60em);
     margin: auto;
     /*border: 2px solid black;*/
     display: flex;
@@ -123,7 +123,7 @@
 
 .Reading_articleBody{
     position: relative;
-    width: min(100%,40em);
+    width: min(100%,50em);
     margin: auto;
     font-family: 'Aleo', serif;
     letter-spacing: 0.5px;
